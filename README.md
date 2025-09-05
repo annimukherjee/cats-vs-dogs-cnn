@@ -1,6 +1,6 @@
 # CNN Cat vs Dog Classifier
 
-Code: 
+Code: https://github.com/annimukherjee/cats-vs-dogs-cnn
 
 ## Problem Statement
 The objective of this project is to design and train a **Convolutional Neural Network (CNN)** that can classify images of cats and dogs. This is a binary classification problem where the model must output whether the given input image belongs to the "Cat" class or the "Dog" class.
@@ -21,7 +21,7 @@ The objective of this project is to design and train a **Convolutional Neural Ne
    - Conv2D → ReLU → MaxPooling  
    - Conv2D → ReLU → MaxPooling  
    - Flatten → Dense(128, ReLU) → Dense(1, Sigmoid)  
-   - Total: ~ a few hundred thousand trainable parameters.
+   - Total: ~ 3,696,801 parameters.
    
 2. **Training**:
    - Optimizer: `Adam`
@@ -37,23 +37,13 @@ The objective of this project is to design and train a **Convolutional Neural Ne
 
 ## Results
 
-- **Training Accuracy**: ~95% (after ~25 epochs)  
-- **Validation Accuracy**: ~92% (balanced generalization)  
-- **Test Accuracy**: ~91–93% depending on random splits  
-- Predictions on unseen images were largely correct, with occasional misclassifications in edge cases (low-light or ambiguous images).
+- **Test Accuracy**: 77.56%  
+- Predictions on unseen images were largely correct, with occasional misclassifications in edge cases (ambiguous images).
 
 ## Challenges & Learnings
 - **Data Quality**: Some images contained noise or ambiguous labeling, which affected predictions.  
 - **Overfitting**: Initially, the model showed signs of overfitting; adding **data augmentation** and normalization improved generalization.  
-- **Hyperparameter Sensitivity**: Small changes in batch size, learning rate, or augmentation intensity influenced validation accuracy.  
 - **Key Learning**: Well-structured preprocessing and augmentation can significantly enhance model performance on small to medium datasets.
-
-## Future Improvements
-
-- Use deeper architectures (e.g., VGG16, ResNet) with transfer learning.
-- Introduce regularization techniques like Dropout or L2 penalties.
-- Experiment with larger image sizes for finer feature extraction.
-- Deploy the model as a web app for interactive classification.
 
 ---
 
